@@ -3,8 +3,6 @@ package ASAC8._SpringP2ractice.banner.controller;
 import ASAC8._SpringP2ractice.banner.Banner;
 import ASAC8._SpringP2ractice.banner.controller.response.BannerResponse;
 import ASAC8._SpringP2ractice.banner.repository.BannerRepository;
-import ASAC8._SpringP2ractice.deadlineSale.controller.response.DeadlineSaleResponse;
-import ASAC8._SpringP2ractice.weekend.controller.response.WeekendResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
