@@ -22,6 +22,7 @@ public class NewProductController {
         newProductRepository.reset();
 
         List<NewProduct> newProduct = newProductRepository.create(
+                1,
                 "고양이 종합 영양제",
                 "모든 연령대의 고양이를 위한 종합 영양제, 60점",
                 "https://product-image.kurly.com/hdims/resize/%5E%3E360x%3E468/cropcenter/360x468/quality/85/src/product/image/d7d1c775-4128-4536-aa8c-c922d2089da4.jpg?v=0531",

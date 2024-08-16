@@ -25,6 +25,7 @@ public class BannerController {
         bannerRepository.reset();
 
         List<Banner> banner = bannerRepository.create(    //서비스로 빼거나 레파지토리에 넣기
+                1,
                 "1",
                 "https://product-image.kurly.com/hdims/resize/%3E1900x%3E370/quality/85/src/banner/main/pc/img/e8a7168a-d665-4795-9fa0-2b9bcff17c7e.png"
         );
