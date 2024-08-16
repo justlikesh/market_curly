@@ -25,7 +25,6 @@ public class BannerRepository implements Repository {
             System.out.println(each);
         }
 
-        id = id + 1;
 
 
         return bannerList;
