@@ -18,9 +18,8 @@ public class LowestRepository implements Repository{
     }
 
     @Override
-    public List<LowerPrice> create(Integer id, String title, String description, String imageUrl, Integer originalPrice, Integer salePrice, Integer discountRate, Integer reviewCount, double rating, Boolean isLowestPrice) {
+    public List<LowerPrice> create(String title, String description, String imageUrl, Integer originalPrice, Integer salePrice, Integer discountRate, Integer reviewCount, double rating, Boolean isLowestPrice) {
         lowerPriceList.add(new LowerPrice(id, title, description, imageUrl, originalPrice, salePrice, discountRate, reviewCount, rating, isLowestPrice));
-
 
         for(LowerPrice each : lowerPriceList){
             System.out.println(each);
