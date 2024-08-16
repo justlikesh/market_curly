@@ -10,6 +10,6 @@ import java.util.List;
 @AllArgsConstructor
 @Getter
 public class BannerResponse {
-    @JsonProperty("MainbannerSlider")   //대문자를 쓰기위한 어노테이션
+    @JsonProperty("MainBannerSlider")   //대문자를 쓰기위한 어노테이션
     private List<Banner> MainBannerSlider;
 }
