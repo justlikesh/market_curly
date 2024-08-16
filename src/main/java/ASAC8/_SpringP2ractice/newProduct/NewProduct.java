@@ -15,6 +15,7 @@ public class NewProduct {
     private Integer id;
     private String title;
     private String description;
+    private String brand;
     private String imageUrl;
     private Integer originalPrice;
     private Integer salePrice;
