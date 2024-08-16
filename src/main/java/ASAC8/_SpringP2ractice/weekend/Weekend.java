@@ -14,8 +14,8 @@ import lombok.ToString;
 public class Weekend {
     private Integer id;
     private String title;
-    private String imageUrl;
     private String description;
+    private String imageUrl;
     private Integer originalPrice;
     private Integer salePrice;
     private Integer discountRate;
