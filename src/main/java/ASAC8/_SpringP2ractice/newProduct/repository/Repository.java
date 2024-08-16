@@ -4,5 +4,7 @@ import ASAC8._SpringP2ractice.newProduct.NewProduct;
 import java.util.List;
 
 public interface Repository {
-    public abstract List<NewProduct> create(NewProduct newProduct);
+    List<NewProduct> getAll();
+    void addNewProduct(NewProduct newProduct);
+    void reset();
 }
