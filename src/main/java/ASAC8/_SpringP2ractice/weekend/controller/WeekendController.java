@@ -1,42 +1,38 @@
 package ASAC8._SpringP2ractice.weekend.controller;
 
-import ASAC8._SpringP2ractice.weekend.Weekend;
-import ASAC8._SpringP2ractice.weekend.controller.response.WeekendResponse;
+import ASAC8._SpringP2ractice.weekend.ItemResponseDto;
+import ASAC8._SpringP2ractice.weekend.controller.response.WeekendResponseDto;
 import ASAC8._SpringP2ractice.weekend.repository.WeekendRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import ASAC8._SpringP2ractice.weekend.service.WeekendService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RequestMapping("/main/api")
-@RestController
+@RestController // 얘는 존나 간단해야해. 얘한테 뭘 시킬 생각을 하지마. 요청-응답
+@RequiredArgsConstructor
 public class WeekendController {
 
-    @Autowired
-    WeekendRepository weekendRepository;
+    // 주입
+//    @Autowired
+//    private WeekendRepository weekendRepository;
+//    private final/* 생성자 말고는 이 값을 설정할 방법이 없어 .. Setter 호출을 못하니까 */ WeekendIRepository weekendRepository;
+    private final/* 생성자 말고는 이 값을 설정할 방법이 없어 .. Setter 호출을 못하니까 */ WeekendRepository weekendRepository;
 
     @GetMapping("/weekend-special")
-    public WeekendResponse getWeekend(){
-
-        weekendRepository.reset();
-
-        List<Weekend> weekend = weekendRepository.create(
-                1,
-                "퓨어 튜나 스틱 버라이어티팩",
-                "60개입 대용량 팩으로 즐기는 휴먼 그레이드 런치 스틱 간식",
-                "https://product-image.kurly.com/hdims/resize/%5E%3E360x%3E468/cropcenter/360x468/quality/85/src/product/image/3b416cbf-8d57-44b2-bcc6-e6d6c141160f.jpg",
-                30000,
-                20000,
-                33,
-                120,
-                4.5,
-                true
-        );
-
-//        Integer totalCount = 6;
-
-        WeekendResponse response = new WeekendResponse(weekend,weekend.size());
+    public WeekendResponseDto getWeekend(){
+        List<ItemResponseDto> weekend = weekendRepository.create();
+        WeekendResponseDto response = WeekendResponseDto.of(weekend);
+        // of : 정적 팩토리 메서드
+        //  - static 정적 메서드 : Object object = new Object() -> 객체 object.method() | 클래스 Object.method()
+        //          - 메서드를 쓸려면 객체가 필요해. 이게 제일 기본이야      = 객체 object.method()
+        //          - 정적 static 메서드는 클래스만 필요해. 객체가 필요없어 = 클래스 Object.method()
+        //  - 팩토리 : 새로운 객체 / 생성한 객체
+        //      - 팩토리 = 공장
+        //      - 자동차 팩토리 = 자동차 생성
+        //      - 객체 팩토리 = 객체 생성
 
         return response;
     }

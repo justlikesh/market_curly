@@ -12,8 +12,8 @@ import lombok.ToString;
 public class Deadline {
     private Integer id;
     private String title;
-    private String description;
     private String imageUrl;
+    private String description;
     private Integer originalPrice;
     private Integer salePrice;
     private Integer discountRate;

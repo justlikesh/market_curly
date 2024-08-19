@@ -13,8 +13,8 @@ public class LowerPrice {
 
     private Integer id;
     private String title;
-    private String description;
     private String imageUrl;
+    private String description;
     private Integer originalPrice;
     private Integer salePrice;
     private Integer discountRate;

@@ -14,7 +14,7 @@ public class DeadlineSaleRepository implements Repository{
     static Integer id = 1;
 
     @Override
-    public List<Deadline> create(Integer id, String title, String description, String imageUrl, Integer originalPrice, Integer salePrice, Integer discountRate, Integer reviewCount, double rating) {
+    public List<Deadline> create(String title, String description, String imageUrl, Integer originalPrice, Integer salePrice, Integer discountRate, Integer reviewCount, double rating) {
         deadlineList.add(new Deadline(id, title, description, imageUrl, originalPrice, salePrice, discountRate, reviewCount, rating));
 
         for(Deadline each : deadlineList){

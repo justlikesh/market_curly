@@ -18,13 +18,14 @@ public class BannerRepository implements Repository {
     }
 
     @Override
-    public List<Banner> create(Integer id, String title, String imageUrl) {
+    public List<Banner> create(String title, String imageUrl) {
         bannerList.add(new Banner(id, title, imageUrl));
 
         for(Banner each : bannerList){
             System.out.println(each);
         }
 
+        id = id + 1;
 
 
         return bannerList;
